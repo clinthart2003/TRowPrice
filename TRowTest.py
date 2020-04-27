@@ -22,7 +22,7 @@ def short_word_counter(sentance = 'The cow jumped over the moon.'):
     wordlength = 0
 
     for i in sentance:
-        if (i.lower() == 'the') or (i.lower() == 'a'):   # ignore the word "the" from counting... typical usecase
+        if (i.lower() == 'the') or (i.lower() == 'a'):   # ignore the words "the" and "a" from counting... typical usecase
             continue
         elif count == 0:
             lword = i
