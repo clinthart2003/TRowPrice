@@ -12,12 +12,13 @@ test_sentances_short = [['Add a method that returns the shortest word and length
 def unittest():
     """
     This is a condensed version of a set of tests that uses 1 method for execution.  the
-    list "test_sentances" contains a sentance, the expected word and its length.
+    lists "test_sentances_long" and "test_sentances_short" contains a list of sentances to test. 
+    The expected word and its length are part of the list and used for comparison.
 
     Example results:
     test Passed: jumped, 6
     test Passed: cow, 3
-    Test Failed: Add, 3   Intentionally FAILED test
+    Test Failed: Add, 3  expected: Sentance, 8
     test Passed: shortest, 8
     """
     for test in test_sentances_long:
