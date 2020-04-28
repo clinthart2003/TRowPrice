@@ -9,3 +9,5 @@ print (results)
 
 
 There is a python script that runs 4 different tests.... from and IDE or python terminal run: "python Unit_Test.py".    The example test script has an intentional failure to show the eles: statement will execute.  
+
+I added a second test script "Unit_Test_2.py" that has a list of cases that is executed through a single method.  Same results should be seen as in the first. 
