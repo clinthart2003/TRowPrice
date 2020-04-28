@@ -8,3 +8,4 @@ print (results)
 ['jumped', 6] 
 
 
+There is a python script that runs 4 different tests.... from and IDE or python terminal run: "python Unit_Test.py".    The example test script has an intentional failure to show the eles: statement will execute.  
