@@ -22,7 +22,7 @@ def short_word_counter(sentance = 'The cow jumped over the moon.'):
     wordlength = 0
 
     for i in sentance:
-        if (i.lower() == 'the') or (i.lower() == 'a'):   # ignore the words "the" and "a" from counting... typical usecase
+        if (i.lower() == 'the') or (i.lower() == 'a'):   # ignore the word "the" from counting... typical usecase
             continue
         elif count == 0:
             lword = i
@@ -34,35 +34,3 @@ def short_word_counter(sentance = 'The cow jumped over the moon.'):
     return [lword, wordlength]
 
 
-#unittests
-results = (long_word_counter(sentance='The cow jumped over the moon.'))
-if results[0] != 'jumped' and results[1]!='6':
-    print ("test Failed")
-    print(results)
-else:
-    print ("test PASSED")
-    print(results)
-
-results = (short_word_counter(sentance='The cow jumped over the moon?'))
-if results[0] != 'cow' and results[1]!='3':
-    print ("test Failed")
-    print (results)
-else:
-    print ("Test PASSED")
-    print(results)
-
-results = (short_word_counter(sentance='Add a method that returns the shortest word and length with unit tests!'))
-if results[0] != 'Add' and results[1]!='3':
-    print ("test Failed")
-    print (results)
-else:
-    print ("Test PASSED")
-    print(results)
-
-results = (long_word_counter(sentance='Add a method that returns the shortest word and length with unit tests!'))
-if results[0] != 'shortest' and results[1]!='8':
-    print ("test Failed")
-    print (results)
-else:
-    print ("Test PASSED")
-    print(results)
