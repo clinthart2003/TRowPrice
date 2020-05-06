@@ -1,21 +1,21 @@
 import string
 import re
 
-def long_word_counter(sentance='The cow jumped over the moon.'):
+def long_word_counter(sentence='The cow jumped over the moon.'):
     """
-    This method looks for the longest word in a sentance. The return
+    This method looks for the longest word in a sentence. The return
     is a list containing the longest word and its length as an int.
     Special characters are removed from being counted.
 
-    Example:  long_word_counter(sentance='The cow jumped over the moon.')
+    Example:  long_word_counter(sentence='The cow jumped over the moon.')
 
     """
-    sentance = re.sub(r"[,.;@#?!&$]+", '', sentance).split()  #remove all punctuations from sentances
+    sentence = re.sub(r"[,.;@#?!&$]+", '', sentence).split()  #remove all punctuations from sentences
     count = 0
     lword = ''
     wordlength = 0
 
-    for i in sentance:
+    for i in sentence:
         count += 1
         if len(i) > wordlength:
             lword = i
@@ -23,31 +23,30 @@ def long_word_counter(sentance='The cow jumped over the moon.'):
     return [lword, wordlength]
 
 
-def short_word_counter(sentance = 'The cow jumped over the moon.'):
+def short_word_counter(sentence = 'The cow jumped over the moon.'):
     """
-        This method looks for the shortest word in a sentance. The return
+        This method looks for the shortest word in a sentence. The return
         is a list containing the shortest word and its length as an int.  The
         words "the" and "a" are intentionally ignored.  Special characters are
         removed from being counted.
 
-        Example:  short_word_counter(sentance='The cow jumped over the moon.')
+        Example:  short_word_counter(sentence='The cow jumped over the moon.')
 
         """
-    sentance = re.sub(r"[,.;@#?!&$]+", '', sentance).split()   #remove all punctuations from sentances
-    count = 0
+    sentence = re.sub(r"[,.;@#?!&$]+", '', sentence).split()   #remove all punctuations from sentences
     lword = ''
     wordlength = 0
 
-    for i in sentance:
-        if (i.lower() == 'the') or (i.lower() == 'a'):   # ignore the word "the" from counting... typical usecase
+    for i in sentence:
+        if (i.lower() == 'the') or (i.lower() == 'a'):   # ignore the word "the" from counting... typical use case
             continue
-        elif count == 0:
+        elif len(i) < wordlength:
             lword = i
             wordlength = len(i)
-        if len(i) < wordlength:
+        elif wordlength == 0:
             lword = i
             wordlength = len(i)
-        count += 1
+
     return [lword, wordlength]
 
 

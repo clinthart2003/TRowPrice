@@ -1,27 +1,26 @@
 from TRowTest import *
 
-test_sentances_long = [['The cow jumped over the moon.', 'jumped', 6],
-                       ['The cow jumped over the moon?', 'jumped', 6]
+test_sentences_long = [['The cow jumped over the moon.', 'jumped', 6],
+                       ["Clinton's sister just had from COVAD-19!!!", 'Clinton\'s', 9]
                        ]
 
 
-test_sentances_short = [['Add a method that returns the shortest word and length with unit tests!', 'Sentance', 8],
-                        ['Add a method that returns the shortest word and length with unit tests!', 'Add', 3]
+test_sentences_short = [['Add a method that returns the shortest word and length with unit tests!', 'Add', 3],
+                        ["Clinton's sister just had from COVAD-19!!!", 'had', 3]
                         ]
 
 def unittest():
     """
     This is a condensed version of a set of tests that uses 1 method for execution.  the
-    lists "test_sentances_long" and "test_sentances_short" contains a list of sentances to test. 
-    The expected word and its length are part of the list and used for comparison.
+    list "test_sentences" contains a sentence, the expected word and its length.
 
     Example results:
     test Passed: jumped, 6
     test Passed: cow, 3
-    Test Failed: Add, 3  expected: Sentance, 8
+    Test Failed: Add, 3   Intentionally FAILED test
     test Passed: shortest, 8
     """
-    for test in test_sentances_long:
+    for test in test_sentences_long:
         try:
             results = (long_word_counter(test[0]))
             if (results[0] == test[1]) and (results[1]==test[2]):
@@ -31,7 +30,7 @@ def unittest():
         except Exception as e:
             print (e)
 
-    for test in test_sentances_short:
+    for test in test_sentences_short:
         try:
             results = (short_word_counter(test[0]))
             if (results[0] == test[1]) and (results[1]==test[2]):
